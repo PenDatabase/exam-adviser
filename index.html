@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Wisdom • David Eneasato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: 234 179 8;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .course-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: rgb(234 179 8);
+        }
+
+        .level-heading {
+            font-family: 'Playfair Display', sans-serif;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-50 text-zinc-800">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-8 h-8 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-900 font-semibold text-xl leading-none pt-0.5">D</div>
+                <div>
+                    <span class="heading-font text-2xl tracking-tight font-semibold">Course Wisdom</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-8 text-sm font-medium">
+                <a href="#courses" onclick="document.getElementById('courses-section').scrollIntoView({ behavior: 'smooth' })" 
+                   class="nav-link text-zinc-600 hover:text-yellow-600">Courses</a>
+                <a href="#about" onclick="document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' })" 
+                   class="nav-link text-zinc-600 hover:text-yellow-600">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg pt-16 pb-20">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white rounded-3xl px-4 py-1.5 text-sm mb-6 border border-zinc-100 shadow-sm">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span class="text-emerald-700 font-medium">David Eneasato</span>
+            </div>
+            
+            <h1 class="heading-font text-5xl md:text-6xl leading-tight font-semibold tracking-tighter text-zinc-900 mb-6">
+                Important advice from our course guys who've written your exams
+            </h1>
+            
+            <p class="text-xl text-zinc-600 max-w-lg mx-auto leading-relaxed">
+                I'm giving you guys important tips to pass these exams; Our higher level guys came together to do this for you. I'm running for <b>NACOS president soon</b> vote...
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="document.getElementById('courses-section').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-8 py-4 bg-zinc-900 hover:bg-black text-white rounded-2xl font-medium flex items-center gap-x-3 transition-all active:scale-95">
+                    <span>Important Advice For Exams</span>
+                    <i class="fa-solid fa-arrow-down text-sm"></i>
+                </button>
+                
+                <a href="#about" onclick="document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' })" 
+                   class="px-8 py-4 text-zinc-600 hover:text-zinc-900 font-medium flex items-center gap-x-2 transition-colors">
+                    Meet Me; David Eneasato →
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Courses Section -->
+    <section id="courses-section" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="flex items-end justify-between mb-10">
+            <div>
+                <span class="uppercase tracking-[2px] text-xs font-medium text-yellow-600">Start here</span>
+                <h2 class="heading-font text-4xl font-semibold tracking-tight mt-1">Featured Courses</h2>
+            </div>
+        </div>
+
+        <!-- 100 Level -->
+        <div class="mb-16">
+            <h3 class="level-heading text-3xl font-semibold text-zinc-800 mb-8 flex items-center gap-x-3">
+                <span>100 Level</span>
+                <div class="flex-1 h-px bg-gradient-to-r from-yellow-200 to-transparent"></div>
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="level-100-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- 200 Level -->
+        <div>
+            <h3 class="level-heading text-3xl font-semibold text-zinc-800 mb-8 flex items-center gap-x-3">
+                <span>200 Level</span>
+                <div class="flex-1 h-px bg-gradient-to-r from-yellow-200 to-transparent"></div>
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="level-200-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Creator -->
+    <section id="about-section" class="bg-white py-20 border-t border-b">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-52 flex-shrink-0">
+                    <div class="w-44 h-44 bg-gradient-to-br from-amber-100 to-yellow-200 rounded-3xl flex items-center justify-center text-7xl shadow-inner">
+                        👨‍🎓
+                    </div>
+                </div>
+                
+                <div class="flex-1">
+                    <h2 class="heading-font text-3xl font-semibold tracking-tight mb-6">Hi, I'm David Eneasato</h2>
+                    <div class="prose prose-zinc leading-relaxed text-[17px]">
+                        <p class="text-zinc-600">
+                            I'm a student who got tired of watching my juniors struggle with the same challenges I faced. 
+                            So I personally reached out to seniors across different departments who excelled in their courses, 
+                            and asked them to share the most valuable lessons they learned.
+                        </p>
+                        <p class="text-zinc-600">
+                            Every piece of advice on this site comes from real experiences — not theory, not professors, 
+                            but students who sat in the same lecture halls and took the same exams.
+                        </p>
+                        <p class="text-zinc-600">
+                            This project isn't about perfection. It's about paying it forward and making the journey a little easier for the next person.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-10 pt-8 border-t flex items-center gap-x-6 text-sm">
+                        <div class="flex items-center gap-x-2">
+                            <i class="fa-solid fa-heart text-rose-500"></i>
+                            <span class="font-medium">Use these advice to pass your exams</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-400 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-7 h-7 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-900 text-lg">D</div>
+                    <div class="heading-font text-2xl tracking-tighter text-white">Course Wisdom</div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-sm">Built by David Eneasato for fellow students</p>
+                    <p class="text-xs mt-3 opacity-60">© 2026 • You Guys Should Succeed In You Exams</p>
+                </div>
+                
+                <div class="flex gap-x-6 text-2xl">
+                    <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Advice Modal -->
+    <div id="advice-modal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div class="advice-modal bg-white max-w-lg w-full rounded-3xl shadow-2xl max-h-[85vh] flex flex-col">
+            <div class="px-8 pt-6 pb-4 border-b flex items-center justify-between">
+                <div>
+                    <div id="modal-course-code" class="font-mono text-sm text-yellow-600"></div>
+                    <div id="modal-course-title" class="heading-font text-2xl font-semibold"></div>
+                </div>
+                <button onclick="closeModal()" 
+                        class="w-10 h-10 flex items-center justify-center text-2xl leading-none text-zinc-400 hover:text-zinc-600 transition-colors">×</button>
+            </div>
+            
+            <div id="modal-content" class="p-8 overflow-auto flex-1 text-zinc-600 leading-relaxed text-[15.5px]">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="p-6 border-t text-xs text-zinc-400 flex items-center gap-x-2">
+                <i class="fa-solid fa-quote-left"></i>
+                <span>Advice collected from multiple seniors who passed this course</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample courses with level
+        const courses = [
+            {
+                level: 100,
+                code: "GST 123",
+                title: "Nigerian Peoples & Culture",
+                desc: "History, cultural diversity, and contemporary issues in Nigeria.",
+                advice: `
+                    <p class="mb-6">"Don't underestimate this course because it's 'GST'. The essays and presentations carry heavy marks."</p>
+                    <p class="mb-6">"Read beyond the slides. Local newspapers and documentaries gave me better context for the exam questions."</p>
+                    <p>"Attend all lectures. The lecturer usually gives hints about what will appear in the exams."</p>
+                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— Multiple seniors, 2024/2025</div>
+                `
+            },
+            {
+                level: 100,
+                code: "CSC141",
+                title: "Electricity & Magnetism",
+                desc: "Electric fields, circuits, electromagnetic induction, and Maxwell's equations.",
+                advice: `
+                    <p class="mb-6">"Visualize everything. Draw the electric field lines and direction of current flow. It makes the formulas so much more intuitive."</p>
+                    <p class="mb-6">"Past questions are gold. The lecturers rarely change the structure of their questions. Solve at least 8 years worth before exams."</p>
+                    <p>"Don't ignore the lab sessions. Understanding how the theory connects to real equipment helped me score higher."</p>
+                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— Multiple seniors, 2024/2025</div>
+                `
+            },
+            {
+                level: 200,
+                code: "IFT222",
+                title: "Data Structures & Algorithms",
+                desc: "Core programming concepts, complexity analysis, and implementing efficient solutions.",
+                advice: `
+                    <p class="mb-6">"The biggest mistake is trying to memorize code instead of understanding the underlying patterns. Spend time drawing diagrams for each data structure on paper before coding."</p>
+                    <p class="mb-6">"For recursion problems, always start with the base case. Write it first. Then think about how the smaller problem relates to the bigger one."</p>
+                    <p>"Practice on LeetCode but don't just look at solutions. Struggle for at least 30 minutes before checking hints."</p>
+                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— Multiple seniors, 2024/2025</div>
+                `
+            },
+            {
+                level: 200,
+                code: "MTH 121",
+                title: "Calculus II",
+                desc: "Integration techniques, series, and multivariable calculus foundations.",
+                advice: `
+                    <p class="mb-6">"Master integration by parts and trigonometric substitutions early. These come up everywhere later."</p>
+                    <p class="mb-6">"When you get stuck on a proof, go back to the definition. Most things in calculus reduce to first principles."</p>
+                    <p>"Group study helped me a lot — explaining concepts to others exposed my own gaps immediately."</p>
+                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— Multiple seniors, 2024/2025</div>
+                `
+            }
+        ]
+        
+        // Render courses by level
+        function renderCourses() {
+            const level100Grid = document.getElementById('level-100-grid')
+            const level200Grid = document.getElementById('level-200-grid')
+            
+            level100Grid.innerHTML = ''
+            level200Grid.innerHTML = ''
+            
+            courses.forEach((course, index) => {
+                const cardHTML = `
+                    <div onclick="showAdvice(${index})" 
+                         class="course-card bg-white border border-zinc-100 rounded-3xl p-8 cursor-pointer group">
+                        <div class="font-mono text-xs tracking-widest text-yellow-600 mb-3">${course.code}</div>
+                        <h3 class="heading-font text-2xl font-semibold mb-4 group-hover:text-yellow-600 transition-colors">${course.title}</h3>
+                        <p class="text-zinc-600 line-clamp-3">${course.desc}</p>
+                        
+                        <div class="mt-8 flex items-center justify-between text-sm">
+                            <span class="text-emerald-600 font-medium flex items-center gap-x-1">
+                                <i class="fa-solid fa-check"></i>
+                                <span>20+ advices</span>
+                            </span>
+                            <span class="text-zinc-400 group-hover:text-yellow-500 transition-colors flex items-center gap-x-2">
+                                Read advice 
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+                `
+                if (course.level === 100) {
+                    level100Grid.innerHTML += cardHTML
+                } else {
+                    level200Grid.innerHTML += cardHTML
+                }
+            })
+        }
+        
+        // Modal functions
+        let currentCourse = null
+        
+        function showAdvice(index) {
+            currentCourse = courses[index]
+            document.getElementById('modal-course-code').textContent = currentCourse.code
+            document.getElementById('modal-course-title').textContent = currentCourse.title
+            document.getElementById('modal-content').innerHTML = currentCourse.advice
+            document.getElementById('advice-modal').classList.remove('hidden')
+            document.getElementById('advice-modal').classList.add('flex')
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('advice-modal')
+            modal.classList.add('hidden')
+            modal.classList.remove('flex')
+        }
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                closeModal()
+            }
+        })
+        
+        // Click outside modal to close
+        document.getElementById('advice-modal').addEventListener('click', function(e) {
+            if (e.target.id === 'advice-modal') {
+                closeModal()
+            }
+        })
+        
+        // Initialize everything
+        function init() {
+            renderCourses()
+            console.log('%cCourse Wisdom ready 👨‍🎓', 'color: #eab308; font-family: monospace')
+        }
+        
+        window.onload = init
+    </script>
+</body>
+</html>

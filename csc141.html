@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC141 - Course Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap');
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .advice-card {
+            transition: all 0.3s ease;
+        }
+        
+        .advice-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-50 text-zinc-800">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-100 bg-white sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-x-3 hover:text-yellow-600 transition-colors">
+                <div class="w-7 h-7 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-900 text-lg">D</div>
+                <span class="heading-font text-xl font-semibold">Course Wisdom</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium flex items-center gap-x-2 text-zinc-600 hover:text-yellow-600">
+                ← Back to all courses
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white border-b py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-4 py-1.5 bg-yellow-100 text-yellow-700 text-sm font-medium rounded-3xl mb-4">
+                CSC 141
+            </div>
+            <h1 class="heading-font text-5xl font-semibold tracking-tight text-zinc-900">
+                Operating Systems
+            </h1>
+            <p class="mt-4 text-zinc-600 max-w-md mx-auto">
+                Important Advice You Must Know To Pass CSC141
+            </p>
+        </div>
+    </header>
+
+    <!-- Advice Section -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <div class="mb-12">
+            <h2 class="text-3xl font-semibold mb-3">Our higher level guys gave CRITICAL advice. Maximize them</h2>
+            <p class="text-zinc-600">Higher Level Guys And David Eneasato</p>
+        </div>
+
+        <div class="space-y-8" id="advice-container">
+            <!-- Populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-400 py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-sm">Built by David Eneasato for fellow students</p>
+            <p class="text-xs mt-2 opacity-60">© 2026 • You Guys Should Succeed In You Exams</p>
+        </div>
+    </footer>
+
+    <script>
+        const adviceList = [
+            {
+                text: "Read the technical part of the note and do not focus on the story part make sure you have a good understanding of CPU scheduling and other technical parts of the note"
+            },
+            {
+                text: "Okafor Peter:\nTry to remember Mr. Herny's definitions.\nThey are simple and very demonstrative if you're someone who traces definitions to real life objects"
+            },
+            {
+                text: "Don't panic the exam is just hype,if you read well and calm down and write it you'll be alright. Also make sure you explain very well"
+            },
+            {
+                text: "Just read deadlockk and the thiings after moodle 2 and prayy hardd"
+            },
+            {
+                text: "Get all your pqs on our shared CIS Google drive",
+                link: "https://bit.ly/computersciencenotes",
+                linkName: "bit.ly/computersciencenotes"
+            },
+            {
+                text: "Pray like it's up to God and read like it's up to you. Repetition is key for bulky courses like this, the more times you read the whole thing, the better. Good luck😊👍🏻"
+            },
+            {
+                text: "For Operating Systems, I recommend using Neso Academy. His explanations are very clear and easy to understand. You can find one of his Operating System playlists here:\n\nI recommend watching a few videos every day. From my experience, his lessons closely follow the same concepts and slides that our lecturer uses, which makes studying much easier.",
+                link: "https://youtu.be/vBURTt97EkA?si=W3jsxXTXSNFPYnNW",
+                linkName: "Watch Playlist →"
+            },
+            {
+                text: "They should not only read their notes\nThey should source for youtube videos and additional materials to deepen their understanding"
+            },
+            {
+                text: "Don't try to cram the night before, you might end up weeping during the exam. Start reading right now. While reading, focus more on understanding the concepts than jotting. Don't bank on pq, there's a 80% chance they'll fall your hand, the other 20% is for if your directed by God. The Lord is your strength, you will overcome. Peace✌️"
+            },
+            {
+                text: "Pray before you enter the hall, as you're writing and when you submit\nTrust in the lord, lean not to your understanding\n\nREAD TEXTBOOOKKK\nREAD YOUR NOTES, THEN USE TEXTBOOK TO FORTIFY UNDERSTANDING, READ IT WELL, LIKE WELL"
+            },
+            {
+                text: "Make sure to study the format of the past questions:\n1. For theory: definition, explanation and most importantly make sure you know how to solve the calculations\n2. You can use chat to help you generate both theory and obj, give it the past questions to help it replicate it."
+            },
+            {
+                text: "Try to understand how something as basic as turning on your PC actually works. How the CPU has to search for the OS in its firmware, and then load the booting instructions into main memory.\n\nOr how a simple action like striking a key on your keyboard actually gets registered by its drivers and the handoffs that happen, up until it's attended to by the OS.\n\n\nDifferences between the os and the kernel. And how the crashes that happen in the kernel differ from the crashes in the user space. And how to resolve both types of crashes."
+            },
+            {
+                text: "For me in used alot of YouTube videos especially from neso academy. I can tell you that 1week before that exam I was seriously cooked cause i didn't know anything at all. But watched those videos and entered the exam and got my A. So just try YouTube and listen carefully to what they're explaining and i think you should be good. I started with the calculations immediately I got my paper cause they carry more mark."
+            },
+            {
+                text: "if henry is your lecturer, better read."
+            },
+            {
+                text: "Idk if this would sound shallow but consume the book like your life depends on it …read it to the point that if they wake you up to ask you a question , you will be able to answer\nEvery line matters"
+            },
+            {
+                text: "use the appropriate terms when giving definitions and pray you dont make mistakes with calculations"
+            },
+            {
+                text: "For your exams, you should really try to understand the concepts and not just cram the concepts. It would to watch videos from Neso Academy. It would really help."
+            },
+            {
+                text: "omo...in my time i stayed up all night reading for the course cause i hadnt open book till the last minute and i was afraid.....i cant really advice not to be afraid cause fear pushes you to work hard but dont let the fear break you and also trust in God...not the point....Read CPU scheduling...and dont read the simple ones like first in first out mr Johnatan doesnt give you the easy question....also read deadlock it comes out a lot....then read lecture six...i dont know the topic per say i think maybe communication....that one comes out too...also pray and leave it in the hands of God"
+            },
+            {
+                text: "Well, I personally feel the course is a bit overhyped. To be honest, just stay calm and understand the concepts. Practice related questions and trust me, you'll have a sweet A.\n\nNothing is impossible!!!🙏🫂"
+            },
+            {
+                text: "Write CLEARLY and draw diagrams NEATLY.\nMake sure you answer the majority you know first, before trying to remember the answers for others, time is of essence"
+            },
+            {
+                text: "Operating systems was really tricky for me as a course\nMy advice to the lower levels is to please research on resource allocation graphs and befriend it\nAlso to use claude AI cos it really helps break down complex concepts"
+            },
+            {
+                text: "Speed bruh"
+            },
+            {
+                text: "For CSC141, don’t try cramming AT ALL , understand the deadlocks, banker’s algorithms and all the calculations and also don’t sleep on your primary definitions and basic knowledge. It will be needed in objective and non calculation theory questions.\n\nFor GST123, read your slides, research if you have to. Everything is in the slides but just go beyond"
+            },
+        ]
+
+
+        function renderAdvice() {
+            const container = document.getElementById('advice-container')
+            container.innerHTML = ''
+
+            adviceList.forEach(advice => {
+                const card = `
+                    <div class="advice-card bg-white border border-zinc-100 rounded-3xl p-8">
+                        <div class="text-lg leading-relaxed">
+                            “${advice.text}”
+                        </div>
+                        ${advice.link ? `
+                        <a href="${advice.link}" target="_blank" 
+                           class="inline-flex items-center gap-x-2 text-yellow-600 hover:text-yellow-700 mt-6 text-sm font-medium">
+                            ${advice.linkName}
+                        </a>` : ''}
+                    </div>
+                `
+                container.innerHTML += card
+            })
+        }
+
+        window.onload = renderAdvice
+    </script>
+</body>
+</html>
