@@ -235,47 +235,22 @@
                 code: "GST 123",
                 title: "Nigerian Peoples & Culture",
                 desc: "History, cultural diversity, and contemporary issues in Nigeria.",
-                advice: `
-                    <p class="mb-6">Find past questions and study them very well, take note of things the lecturer said they'd bring out in exams</p>
-                    <p class="mb-6">Pq will save your ass, read notes then cram pq</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— David Eneasato And Higher Levels</div>
-                `
+                page: "gst123.html"
             },
             {
                 level: 100,
                 code: "CSC141",
                 title: "Operating Systems",
-                desc: "Banker's Algorithm, Deadlock, Multithreading and Multiprocessing",
-                advice: `
-                    <p class="mb-6">"Visualize everything. Draw the electric field lines and direction of current flow. It makes the formulas so much more intuitive."</p>
-                    <p class="mb-6">Okafor Peter:\nTry to remember Mr. Henry's definitions.\nThey are simple and very demonstrative if you're someone who traces definitions to real life objects</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— David Eneasato And Higher Levels</div>
-                `
+                desc: "Deadlock, Multithreading and Multiprocessing",
+                page: "csc141.html"
             },
             {
                 level: 200,
                 code: "IFT222",
-                title: "Data Structures & Algorithms",
-                desc: "Core programming concepts, complexity analysis, and implementing efficient solutions.",
-                advice: `
-                    <p class="mb-6">"The biggest mistake is trying to memorize code instead of understanding the underlying patterns. Spend time drawing diagrams for each data structure on paper before coding."</p>
-                    <p class="mb-6">"For recursion problems, always start with the base case. Write it first. Then think about how the smaller problem relates to the bigger one."</p>
-                    <p>"Practice on LeetCode but don't just look at solutions. Struggle for at least 30 minutes before checking hints."</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— Multiple seniors, 2024/2025</div>
-                `
+                title: "Computer Architecture & Organization",
+                desc: "Cache Miss, Cache Hit",
+                page: "ift222.html"
             },
-            {
-                level: 200,
-                code: "MTH 121",
-                title: "Calculus II",
-                desc: "Integration techniques, series, and multivariable calculus foundations.",
-                advice: `
-                    <p class="mb-6">"Master integration by parts and trigonometric substitutions early. These come up everywhere later."</p>
-                    <p class="mb-6">"When you get stuck on a proof, go back to the definition. Most things in calculus reduce to first principles."</p>
-                    <p>"Group study helped me a lot — explaining concepts to others exposed my own gaps immediately."</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest text-zinc-400">— Multiple seniors, 2024/2025</div>
-                `
-            }
         ]
         
         // Render courses by level
@@ -288,8 +263,8 @@
             
             courses.forEach((course, index) => {
                 const cardHTML = `
-                    <div onclick="showAdvice(${index})" 
-                         class="course-card bg-white border border-zinc-100 rounded-3xl p-8 cursor-pointer group">
+                    <a href="${course.page}"
+                        class="course-card bg-white border border-zinc-100 rounded-3xl p-8 cursor-pointer group block">
                         <div class="font-mono text-xs tracking-widest text-yellow-600 mb-3">${course.code}</div>
                         <h3 class="heading-font text-2xl font-semibold mb-4 group-hover:text-yellow-600 transition-colors">${course.title}</h3>
                         <p class="text-zinc-600 line-clamp-3">${course.desc}</p>
@@ -302,7 +277,7 @@
                                 <i class="fa-solid fa-arrow-right text-xs"></i>
                             </span>
                         </div>
-                    </div>
+                    </a>
                 `
                 if (course.level === 100) {
                     level100Grid.innerHTML += cardHTML
