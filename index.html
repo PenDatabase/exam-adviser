@@ -77,36 +77,43 @@
     </nav>
 
     <!-- Hero -->
-    <header class="hero-bg pt-16 pb-20">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-x-2 bg-white rounded-3xl px-4 py-1.5 text-sm mb-6 border border-zinc-100 shadow-sm">
+   <header
+        class="relative pt-24 pb-24 bg-cover bg-center"
+        style="background-image: url('200lvl.jpg');"
+    >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Content -->
+        <div class="relative max-w-3xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/90 backdrop-blur rounded-3xl px-4 py-1.5 text-sm mb-6 border border-white/20 shadow-sm">
                 <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                 <span class="text-emerald-700 font-medium">David Eneasato</span>
             </div>
-            
-            <h1 class="heading-font text-5xl md:text-6xl leading-tight font-semibold tracking-tighter text-zinc-900 mb-6">
+
+            <h1 class="heading-font text-5xl md:text-6xl leading-tight font-semibold tracking-tighter text-white mb-6">
                 Important things from higher level guys you must know to pass exams
             </h1>
-            
-            <p class="text-xl text-zinc-600 max-w-lg mx-auto leading-relaxed">
+
+            <p class="text-xl text-zinc-200 max-w-lg mx-auto leading-relaxed">
                 Hi guys, I'm David Eneasato and I'm giving you guys important tips to pass these exams; Our higher level guys came together to do this for you. I'm running for <b>NACOS president soon</b> vote...
             </p>
-            
+
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button onclick="document.getElementById('courses').scrollIntoView({ behavior: 'smooth' })" 
-                        class="px-8 py-4 bg-zinc-900 hover:bg-black text-white rounded-2xl font-medium flex items-center gap-x-3 transition-all active:scale-95">
+                <button onclick="document.getElementById('courses').scrollIntoView({ behavior: 'smooth' })"
+                        class="px-8 py-4 bg-white hover:bg-zinc-100 text-zinc-900 rounded-2xl font-medium flex items-center gap-x-3 transition-all active:scale-95">
                     <span>Important Advice For Exams</span>
                     <i class="fa-solid fa-arrow-down text-sm"></i>
                 </button>
-                
-                <a href="#about" onclick="document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' })" 
-                   class="px-8 py-4 text-zinc-600 hover:text-zinc-900 font-medium flex items-center gap-x-2 transition-colors">
+
+                <a href="#about"
+                onclick="document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' })"
+                class="px-8 py-4 text-white hover:text-zinc-200 font-medium flex items-center gap-x-2 transition-colors">
                     Meet Me, David Eneasato →
                 </a>
             </div>
         </div>
     </header>
-
     <!-- Courses Section -->
     <section id="courses" class="max-w-5xl mx-auto px-6 py-20">
         <div class="flex items-end justify-between mb-10">
